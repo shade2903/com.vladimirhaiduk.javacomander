@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
 <VBox alignment="center" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javacomander.filemeneger.Controller">
@@ -19,14 +20,17 @@
 
     <HBox spacing="5">
         <Button focusTraversable="false" maxWidth="Infinity" onAction="#copyBtnAction" text="Копировать файл" HBox.hgrow="ALWAYS" />
-        <Button focusTraversable="false" maxWidth="Infinity"  onAction="#moveBtnAction" text="Переместить файл" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#moveBtnAction" text="Переместить файл" HBox.hgrow="ALWAYS" />
         <Button focusTraversable="false" maxWidth="Infinity" onAction="#deleteBtnAction" text="Удалить файл" HBox.hgrow="ALWAYS" />
-        <Button focusTraversable="false" maxWidth="Infinity" text="Переименовать файл" HBox.hgrow="ALWAYS" />
-        <Button focusTraversable="false" maxWidth="Infinity" text="Создать новый каталог" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#renameBtnAction" text="Переименовать файл" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#createNewDirBtnAction" text="Создать новый каталог" HBox.hgrow="ALWAYS" />
         <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnExitAction" text="Выход" HBox.hgrow="ALWAYS" />
       <padding>
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </padding>
+      <effect>
+         <SepiaTone level="0.21" />
+      </effect>
 
     </HBox>
 </VBox>

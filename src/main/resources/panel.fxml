@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 
 <VBox alignment="center" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javacomander.filemeneger.PanelController">
@@ -8,7 +9,17 @@
     <HBox>
         <ComboBox fx:id="disksBox" onAction="#selectDiskAction" />
         <TextField fx:id="pathField" editable="false" HBox.hgrow="ALWAYS" />
-        <Button onAction="#btnPathUpAction" text="Назад" />
+        <Button contentDisplay="RIGHT" onAction="#btnPathUpAction" text="Назад">
+         <effect>
+            <ColorAdjust>
+               <input>
+                  <SepiaTone />
+               </input>
+            </ColorAdjust>
+         </effect></Button>
+      <effect>
+         <SepiaTone level="0.42" />
+      </effect>
     </HBox>
     <TableView fx:id="filesTable" VBox.vgrow="ALWAYS" />
 

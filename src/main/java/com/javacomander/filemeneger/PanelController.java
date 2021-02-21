@@ -98,7 +98,6 @@ public class PanelController implements Initializable {
     public void updateList(Path path) {
         try {
             pathField.setText(path.normalize().toAbsolutePath().toString());
-
             filesTable.getItems().clear();
             filesTable.getItems().addAll(Files.list(path).map(FileInfo::new).collect(Collectors.toList()));
             filesTable.sort();
