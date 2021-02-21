@@ -4,26 +4,26 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="com.javacomander.filemeneger.Controller">
+<VBox alignment="center" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javacomander.filemeneger.Controller">
     <MenuBar>
         <Menu text="Файл">
-            <MenuItem text="Выход из программы" onAction="#btnExitAction"/>
+            <MenuItem onAction="#btnExitAction" text="Выход из программы" />
         </Menu>
     </MenuBar>
     <HBox VBox.vgrow="ALWAYS">
-        <fx:include fx:id="leftPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
-        <fx:include fx:id="rightPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+        <fx:include fx:id="leftPanel" source="panel.fxml" HBox.hgrow="ALWAYS" />
+        <fx:include fx:id="rightPanel" source="panel.fxml" HBox.hgrow="ALWAYS" />
 
     </HBox>
 
 
     <HBox spacing="5">
-        <Button maxWidth="Infinity" focusTraversable="false" text="Копировать файл" HBox.hgrow="ALWAYS" onAction="#copyBtnAction" />
-        <Button maxWidth="Infinity" focusTraversable="false" text="Переместить файл" HBox.hgrow="ALWAYS" />
-        <Button maxWidth="Infinity" focusTraversable="false" text="Удалить файл" HBox.hgrow="ALWAYS" />
-        <Button maxWidth="Infinity" focusTraversable="false" text="Переименовать файл" HBox.hgrow="ALWAYS" />
-        <Button maxWidth="Infinity" focusTraversable="false" text="Создать новый каталог" HBox.hgrow="ALWAYS" />
-        <Button maxWidth="Infinity" focusTraversable="false" text="Выход" HBox.hgrow="ALWAYS" onAction="#btnExitAction"/>
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#copyBtnAction" text="Копировать файл" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity"  onAction="#moveBtnAction" text="Переместить файл" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#deleteBtnAction" text="Удалить файл" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" text="Переименовать файл" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" text="Создать новый каталог" HBox.hgrow="ALWAYS" />
+        <Button focusTraversable="false" maxWidth="Infinity" onAction="#btnExitAction" text="Выход" HBox.hgrow="ALWAYS" />
       <padding>
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </padding>
