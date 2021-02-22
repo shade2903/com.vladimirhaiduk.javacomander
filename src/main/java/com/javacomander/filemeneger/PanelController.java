@@ -32,7 +32,6 @@ public class PanelController implements Initializable {
         fileTypeColumn.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getType().getName()));
         fileTypeColumn.setPrefWidth(35);
 
-
         TableColumn<FileInfo, String> filenameColumn = new TableColumn<>("Имя");
         filenameColumn.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getFilename()));
         filenameColumn.setPrefWidth(240);
@@ -65,8 +64,6 @@ public class PanelController implements Initializable {
         TableColumn<FileInfo, String> fileDateColumn = new TableColumn<>("Дата изменения");
         fileDateColumn.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getLastModified().format(dtf)));
         fileDateColumn.setPrefWidth(150);
-
-
 
         filesTable.getColumns().addAll(fileTypeColumn, filenameColumn, fileSizeColumn,fileDateColumn);
         filesTable.getSortOrder().add(fileTypeColumn);
