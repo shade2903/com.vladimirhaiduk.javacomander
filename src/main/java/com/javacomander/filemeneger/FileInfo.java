@@ -8,24 +8,7 @@ import java.time.LocalDateTime;
 import java.time.*;
 
 public class FileInfo {
-    public enum FileType{
-        FILE("File"), DIRECTORY("DIR");
 
-        private String name;
-
-        FileType(String name) {
-            this.name=name;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-    }
     private String filename;
     private FileType type;
     private long size;
